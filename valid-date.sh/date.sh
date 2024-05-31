@@ -1,4 +1,5 @@
-convert_month() {
+convert_month()
+{
     local month=$1
     case $month in
         jan|january|1) echo "Jan" ;;
@@ -21,13 +22,13 @@ convert_month() {
 is_leap_year() {
     local year=$1
     if (( year % 4 != 0 )); then
-        return 1  # Not a leap year
+        return 1  
     elif (( year % 400 == 0 )); then
-        return 0  # Leap year
+        return 0 
     elif (( year % 100 == 0 )); then
-        return 1  # Not a leap year
+        return 1
     else
-        return 0  # Leap year
+        return 0  
     fi
 }
 
